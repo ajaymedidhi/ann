@@ -10,10 +10,10 @@ const {
 } = require('../controllers/patientResourceController');
 
 // Get all patient resources with only title and image (protected)
-router.get('/', authenticateToken, getAllPatientResources);
+router.get('/',  getAllPatientResources);
 
 // Get full details of a specific patient resource by ID (protected)
-router.get('/:id', authenticateToken, getPatientResourceById);
+router.get('/:id',  getPatientResourceById);
 
 // Create a new patient resource (protected)
 router.post('/', authenticateToken, createPatientResource);
